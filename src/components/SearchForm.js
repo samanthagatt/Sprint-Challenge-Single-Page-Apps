@@ -1,17 +1,25 @@
 import React from "react";
+import { TextField, Typography, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  searchButton: {
+    width: "50%",
+    minWidth: 200
+  }
+});
 
 export default function SearchForm({searchTerm, setSearchTerm}) {
+  const classes = useStyles();
   return (
-    <section className="search-form">
-      <h2>Search for a character</h2>
       <form>
-        <input name="name" 
-          type="text" 
-          value={searchTerm}
-          onChange={
-            (e) => setSearchTerm(e.target.value)
-          } />
+          <TextField 
+            className={classes.searchButton}  
+            label="Search term" 
+            variant="outlined" 
+            value={searchTerm}
+            onChange={
+              (e) => setSearchTerm(e.target.value)
+            } />
       </form>
-    </section>
   );
 }

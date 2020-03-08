@@ -6,7 +6,7 @@ import SearchPage from "./components/SearchPage";
 
 export default function App() {
   return (
-    <main data-testid='app'>
+    <main className="App" data-testid='app'>
       <Header />
       <Switch>
         <Route path="/search">

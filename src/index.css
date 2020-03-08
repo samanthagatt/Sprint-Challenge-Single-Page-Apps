@@ -20,6 +20,10 @@ main {
   justify-content: space-evenly;
 }
 
+.App {
+  text-align: center;
+}
+
 .page-view {
   min-height: 40vh;
 }
@@ -28,14 +32,6 @@ main {
   margin: 1.25rem;
 }
 
-header, nav, .search-form {
-  text-align: center;
-}
-
 nav a {
   margin: 20px;
-}
-
-.search-form label, .search-form input {
-  
 }

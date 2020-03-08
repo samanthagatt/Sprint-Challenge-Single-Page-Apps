@@ -1,11 +1,16 @@
 import React from "react";
+import CharacterCard from "./CharacterCard";
+import { Grid } from "@material-ui/core"
 
 export default function CharacterList({characters}) {
   return (
-    <section className="character-list">
-      {characters.length !== 0 &&
-        <h2>Characters</h2>}
-      
-    </section>
+    <Grid container justify="center" alignItems="center">
+      {characters.map(character => 
+        <Grid item
+          component={CharacterCard}
+          character={character} 
+          key={character.id} />
+      )}
+    </Grid>
   );
 }
